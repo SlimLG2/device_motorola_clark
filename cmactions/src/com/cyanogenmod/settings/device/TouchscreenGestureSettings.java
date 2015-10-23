@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 The CyanogenMod Project
+ * Copyright (C) 2015 The SlimRoms Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,7 +16,7 @@
 
 package com.cyanogenmod.settings.device;
 
-import com.android.internal.util.cm.ScreenType;
+import com.android.internal.util.slim.DeviceUtils;
 
 import android.app.ActionBar;
 import android.os.Bundle;
@@ -46,7 +46,7 @@ public class TouchscreenGestureSettings extends PreferenceActivity {
         super.onResume();
 
         // If running on a phone, remove padding around the listview
-        if (!ScreenType.isTablet(this)) {
+        if (!DeviceUtils.isTablet(this)) {
             getListView().setPadding(0, 0, 0, 0);
         }
     }
